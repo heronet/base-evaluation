@@ -1,0 +1,261 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8feb0,len:0x2110
+load:0x40374000,len:0xbea0
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: 8cdbabc4ca2f03d34d52d56522463bba9ef12db0499ea7e7f1c063f7848c8b9d
+Expected: 00000000e01f0000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40379ec4
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 22 2026 02:06:14
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8feb0h size=02110h (  8464)
+I (boot): IRAM	: lma=00002138h vma=40374000h size=0bea0h ( 48800)
+I (boot): RTC_DATA	: lma=0000dfe0h vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0bf00h ( 48896)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=03424h ( 13348)
+I (boot): libc heap size 315 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+[m
+[1;32muart:~$ [m[8D[J*** Booting Zephyr OS build v4.4.0-15981-gfeecf52243a9 ***
+[1;32muart:~$ [m[8D[JBASE Test 1 ready. Use 't1 info' first.
+[1;32muart:~$ [m[8D[J[1;32muart:~$ [m
+#HOST_COMMAND t1 run 1 face no
+t1 run 1 face no
+T1,1,face,begin,INFO,0,0,4,0,0,1456
+T1,1,face,runner_available,PASS,0,0,0,0,0,1459
+T1,1,face,device_ready,PASS,0,0,0,0,0,1464
+T1,1,face,capabilities,PASS,0,0,0,0,0,1467
+T1,1,face,caps_modalities_async,INFO,0,0,0,20,3,1471
+T1,1,face,caps_samples_capacity,INFO,0,0,0,0,2000,1476
+T1,1,face,caps_storage_template_size,INFO,0,0,0,1,0,1481
+T1,1,face,inventory_capacity,PASS,0,0,0,2000,3000,1486
+T1,1,face,requested_modality,PASS,0,0,4,20,0,1491
+T1,1,face,enrollment_available,PASS,0,0,0,0,0,1495
+T1,1,face,list_before,PASS,0,0,0,0,0,2690
+T1,1,face,unsupported_staged_enroll,PASS,-88,0,0,0,0,2692
+Run 1: enroll face.
+T1,1,face,callback_register,PASS,0,0,0,0,0,2699
+Present the face sample within 30 seconds.
+T1,1,face,async_accept,PASS,0,0,0,0,0,2707
+T1,1,face,callback_quiescence,PASS,0,0,0,0,0,20245
+T1,1,face,event_enroll_complete,INFO,0,1,4,20126,2,20248
+T1,1,face,event_stopped,INFO,0,0,0,20235,4,20253
+T1,1,face,event_recording,PASS,0,0,0,0,0,20257
+T1,1,face,async_enrollment_trace,PASS,0,1,4,1,1,20261
+T1,1,face,enrollment,PASS,0,1,4,0,0,20266
+T1,1,face,enrolled_id_range,PASS,0,1,4,0,0,20270
+T1,1,face,enrollment_modality,PASS,0,1,4,4,0,20274
+T1,1,face,list_after_enroll,PASS,0,1,0,1,0,20326
+T1,1,face,inventory_after_enroll,INFO,0,1,0,0,1,20329
+T1,1,face,new_record_only,PASS,0,1,0,0,1,20334
+Remove the sample. Identification starts in 2 seconds.
+Present the SAME face sample.
+T1,1,face,identify,PASS,0,1,4,1,4,25146
+T1,1,face,unsupported_verify,PASS,-134,1,0,0,0,25149
+T1,1,face,delete_test_record,PASS,0,1,0,0,0,25417
+T1,1,face,list_after_delete,PASS,0,1,0,0,0,25481
+T1,1,face,inventory_restored,PASS,0,1,0,0,0,25485
+T1,1,face,summary,PASS,0,1,4,0,0,25489
+[1;32muart:~$ [m
+#HOST_COMMAND t1 run 2 face no
+t1 run 2 face no
+T1,2,face,begin,INFO,0,0,4,0,0,33536
+T1,2,face,runner_available,PASS,0,0,0,0,0,33539
+T1,2,face,device_ready,PASS,0,0,0,0,0,33543
+T1,2,face,capabilities,PASS,0,0,0,0,0,33547
+T1,2,face,caps_modalities_async,INFO,0,0,0,20,3,33551
+T1,2,face,caps_samples_capacity,INFO,0,0,0,0,2000,33556
+T1,2,face,caps_storage_template_size,INFO,0,0,0,1,0,33560
+T1,2,face,inventory_capacity,PASS,0,0,0,2000,3000,33566
+T1,2,face,requested_modality,PASS,0,0,4,20,0,33571
+T1,2,face,enrollment_available,PASS,0,0,0,0,0,33575
+T1,2,face,list_before,PASS,0,0,0,0,0,33624
+T1,2,face,unsupported_staged_enroll,PASS,-88,0,0,0,0,33627
+Run 2: enroll face.
+T1,2,face,callback_register,PASS,0,0,0,0,0,33634
+Present the face sample within 30 seconds.
+T1,2,face,async_accept,PASS,0,0,0,0,0,33642
+T1,2,face,callback_quiescence,PASS,0,0,0,0,0,35979
+T1,2,face,event_enroll_complete,INFO,0,1,4,35864,2,35982
+T1,2,face,event_stopped,INFO,0,0,0,35975,4,35987
+T1,2,face,event_recording,PASS,0,0,0,0,0,35991
+T1,2,face,async_enrollment_trace,PASS,0,1,4,1,1,35995
+T1,2,face,enrollment,PASS,0,1,4,0,0,36000
+T1,2,face,enrolled_id_range,PASS,0,1,4,0,0,36004
+T1,2,face,enrollment_modality,PASS,0,1,4,4,0,36008
+T1,2,face,list_after_enroll,PASS,0,1,0,1,0,36065
+T1,2,face,inventory_after_enroll,INFO,0,1,0,0,1,36068
+T1,2,face,new_record_only,PASS,0,1,0,0,1,36073
+Remove the sample. Identification starts in 2 seconds.
+Present the SAME face sample.
+T1,2,face,identify,PASS,0,1,4,1,4,40060
+T1,2,face,unsupported_verify,PASS,-134,1,0,0,0,40063
+T1,2,face,delete_test_record,PASS,0,1,0,0,0,40323
+T1,2,face,list_after_delete,PASS,0,1,0,0,0,40389
+T1,2,face,inventory_restored,PASS,0,1,0,0,0,40392
+T1,2,face,summary,PASS,0,1,4,0,0,40396
+[1;32muart:~$ [m
+#HOST_COMMAND t1 run 3 face no
+t1 run 3 face no
+T1,3,face,begin,INFO,0,0,4,0,0,49104
+T1,3,face,runner_available,PASS,0,0,0,0,0,49107
+T1,3,face,device_ready,PASS,0,0,0,0,0,49111
+T1,3,face,capabilities,PASS,0,0,0,0,0,49115
+T1,3,face,caps_modalities_async,INFO,0,0,0,20,3,49119
+T1,3,face,caps_samples_capacity,INFO,0,0,0,0,2000,49124
+T1,3,face,caps_storage_template_size,INFO,0,0,0,1,0,49128
+T1,3,face,inventory_capacity,PASS,0,0,0,2000,3000,49134
+T1,3,face,requested_modality,PASS,0,0,4,20,0,49139
+T1,3,face,enrollment_available,PASS,0,0,0,0,0,49143
+T1,3,face,list_before,PASS,0,0,0,0,0,49214
+T1,3,face,unsupported_staged_enroll,PASS,-88,0,0,0,0,49216
+Run 3: enroll face.
+T1,3,face,callback_register,PASS,0,0,0,0,0,49223
+Present the face sample within 30 seconds.
+T1,3,face,async_accept,PASS,0,0,0,0,0,49231
+T1,3,face,callback_quiescence,PASS,0,0,0,0,0,51871
+T1,3,face,event_enroll_complete,INFO,0,1,4,51753,2,51874
+T1,3,face,event_stopped,INFO,0,0,0,51870,4,51879
+T1,3,face,event_recording,PASS,0,0,0,0,0,51883
+T1,3,face,async_enrollment_trace,PASS,0,1,4,1,1,51887
+T1,3,face,enrollment,PASS,0,1,4,0,0,51892
+T1,3,face,enrolled_id_range,PASS,0,1,4,0,0,51897
+T1,3,face,enrollment_modality,PASS,0,1,4,4,0,51901
+T1,3,face,list_after_enroll,PASS,0,1,0,1,0,51961
+T1,3,face,inventory_after_enroll,INFO,0,1,0,0,1,51964
+T1,3,face,new_record_only,PASS,0,1,0,0,1,51969
+Remove the sample. Identification starts in 2 seconds.
+Present the SAME face sample.
+T1,3,face,identify,PASS,0,1,4,1,4,55970
+T1,3,face,unsupported_verify,PASS,-134,1,0,0,0,55973
+T1,3,face,delete_test_record,PASS,0,1,0,0,0,56236
+T1,3,face,list_after_delete,PASS,0,1,0,0,0,56299
+T1,3,face,inventory_restored,PASS,0,1,0,0,0,56303
+T1,3,face,summary,PASS,0,1,4,0,0,56307
+[1;32muart:~$ [m
+#HOST_COMMAND t1 run 1 palm no
+t1 run 1 palm no
+T1,1,palm,begin,INFO,0,0,16,0,0,74256
+T1,1,palm,runner_available,PASS,0,0,0,0,0,74259
+T1,1,palm,device_ready,PASS,0,0,0,0,0,74263
+T1,1,palm,capabilities,PASS,0,0,0,0,0,74267
+T1,1,palm,caps_modalities_async,INFO,0,0,0,20,3,74271
+T1,1,palm,caps_samples_capacity,INFO,0,0,0,0,2000,74276
+T1,1,palm,caps_storage_template_size,INFO,0,0,0,1,0,74280
+T1,1,palm,inventory_capacity,PASS,0,0,0,2000,3000,74286
+T1,1,palm,requested_modality,PASS,0,0,16,20,0,74291
+T1,1,palm,enrollment_available,PASS,0,0,0,0,0,74296
+T1,1,palm,list_before,PASS,0,0,0,0,0,74348
+T1,1,palm,unsupported_staged_enroll,PASS,-88,0,0,0,0,74351
+Run 1: enroll palm.
+T1,1,palm,callback_register,PASS,0,0,0,0,0,74358
+Present the palm sample within 30 seconds.
+T1,1,palm,async_accept,PASS,0,0,0,0,0,74366
+T1,1,palm,callback_quiescence,PASS,0,0,0,0,0,78672
+T1,1,palm,event_enroll_complete,INFO,0,1001,16,78550,2,78675
+T1,1,palm,event_stopped,INFO,0,0,0,78667,4,78681
+T1,1,palm,event_recording,PASS,0,0,0,0,0,78685
+T1,1,palm,async_enrollment_trace,PASS,0,1001,16,1,1,78689
+T1,1,palm,enrollment,PASS,0,1001,16,0,0,78694
+T1,1,palm,enrolled_id_range,PASS,0,1001,16,0,0,78698
+T1,1,palm,enrollment_modality,PASS,0,1001,16,16,0,78703
+T1,1,palm,list_after_enroll,PASS,0,1001,0,1,0,78761
+T1,1,palm,inventory_after_enroll,INFO,0,1001,0,0,1,78765
+T1,1,palm,new_record_only,PASS,0,1001,0,0,1,78770
+Remove the sample. Identification starts in 2 seconds.
+Present the SAME palm sample.
+T1,1,palm,identify,PASS,0,1001,16,1001,16,81428
+T1,1,palm,unsupported_verify,PASS,-134,1001,0,0,0,81431
+T1,1,palm,delete_test_record,PASS,0,1001,0,0,0,81699
+T1,1,palm,list_after_delete,PASS,0,1001,0,0,0,81769
+T1,1,palm,inventory_restored,PASS,0,1001,0,0,0,81772
+T1,1,palm,summary,PASS,0,1001,16,0,0,81777
+[1;32muart:~$ [m
+#HOST_COMMAND t1 run 2 palm no
+t1 run 2 palm no
+T1,2,palm,begin,INFO,0,0,16,0,0,89908
+T1,2,palm,runner_available,PASS,0,0,0,0,0,89911
+T1,2,palm,device_ready,PASS,0,0,0,0,0,89915
+T1,2,palm,capabilities,PASS,0,0,0,0,0,89919
+T1,2,palm,caps_modalities_async,INFO,0,0,0,20,3,89923
+T1,2,palm,caps_samples_capacity,INFO,0,0,0,0,2000,89928
+T1,2,palm,caps_storage_template_size,INFO,0,0,0,1,0,89932
+T1,2,palm,inventory_capacity,PASS,0,0,0,2000,3000,89938
+T1,2,palm,requested_modality,PASS,0,0,16,20,0,89943
+T1,2,palm,enrollment_available,PASS,0,0,0,0,0,89948
+T1,2,palm,list_before,PASS,0,0,0,0,0,89999
+T1,2,palm,unsupported_staged_enroll,PASS,-88,0,0,0,0,90002
+Run 2: enroll palm.
+T1,2,palm,callback_register,PASS,0,0,0,0,0,90009
+Present the palm sample within 30 seconds.
+T1,2,palm,async_accept,PASS,0,0,0,0,0,90017
+T1,2,palm,callback_quiescence,PASS,0,0,0,0,0,98828
+T1,2,palm,event_enroll_complete,INFO,0,1001,16,98714,2,98831
+T1,2,palm,event_stopped,INFO,0,0,0,98826,4,98836
+T1,2,palm,event_recording,PASS,0,0,0,0,0,98841
+T1,2,palm,async_enrollment_trace,PASS,0,1001,16,1,1,98845
+T1,2,palm,enrollment,PASS,0,1001,16,0,0,98850
+T1,2,palm,enrolled_id_range,PASS,0,1001,16,0,0,98854
+T1,2,palm,enrollment_modality,PASS,0,1001,16,16,0,98859
+T1,2,palm,list_after_enroll,PASS,0,1001,0,1,0,98918
+T1,2,palm,inventory_after_enroll,INFO,0,1001,0,0,1,98921
+T1,2,palm,new_record_only,PASS,0,1001,0,0,1,98926
+Remove the sample. Identification starts in 2 seconds.
+Present the SAME palm sample.
+T1,2,palm,identify,PASS,0,1001,16,1001,16,101787
+T1,2,palm,unsupported_verify,PASS,-134,1001,0,0,0,101791
+T1,2,palm,delete_test_record,PASS,0,1001,0,0,0,102058
+T1,2,palm,list_after_delete,PASS,0,1001,0,0,0,102123
+T1,2,palm,inventory_restored,PASS,0,1001,0,0,0,102126
+T1,2,palm,summary,PASS,0,1001,16,0,0,102131
+[1;32muart:~$ [m
+#HOST_COMMAND t1 run 3 palm no
+t1 run 3 palm no
+T1,3,palm,begin,INFO,0,0,16,0,0,116767
+T1,3,palm,runner_available,PASS,0,0,0,0,0,116770
+T1,3,palm,device_ready,PASS,0,0,0,0,0,116774
+T1,3,palm,capabilities,PASS,0,0,0,0,0,116779
+T1,3,palm,caps_modalities_async,INFO,0,0,0,20,3,116783
+T1,3,palm,caps_samples_capacity,INFO,0,0,0,0,2000,116788
+T1,3,palm,caps_storage_template_size,INFO,0,0,0,1,0,116792
+T1,3,palm,inventory_capacity,PASS,0,0,0,2000,3000,116798
+T1,3,palm,requested_modality,PASS,0,0,16,20,0,116803
+T1,3,palm,enrollment_available,PASS,0,0,0,0,0,116808
+T1,3,palm,list_before,PASS,0,0,0,0,0,116863
+T1,3,palm,unsupported_staged_enroll,PASS,-88,0,0,0,0,116865
+Run 3: enroll palm.
+T1,3,palm,callback_register,PASS,0,0,0,0,0,116872
+Present the palm sample within 30 seconds.
+T1,3,palm,async_accept,PASS,0,0,0,0,0,116880
+T1,3,palm,callback_quiescence,PASS,0,0,0,0,0,122359
+T1,3,palm,event_enroll_complete,INFO,0,1001,16,122241,2,122362
+T1,3,palm,event_stopped,INFO,0,0,0,122353,4,122368
+T1,3,palm,event_recording,PASS,0,0,0,0,0,122373
+T1,3,palm,async_enrollment_trace,PASS,0,1001,16,1,1,122377
+T1,3,palm,enrollment,PASS,0,1001,16,0,0,122382
+T1,3,palm,enrolled_id_range,PASS,0,1001,16,0,0,122386
+T1,3,palm,enrollment_modality,PASS,0,1001,16,16,0,122391
+T1,3,palm,list_after_enroll,PASS,0,1001,0,1,0,122444
+T1,3,palm,inventory_after_enroll,INFO,0,1001,0,0,1,122447
+T1,3,palm,new_record_only,PASS,0,1001,0,0,1,122453
+Remove the sample. Identification starts in 2 seconds.
+Present the SAME palm sample.
+T1,3,palm,identify,PASS,0,1001,16,1001,16,125160
+T1,3,palm,unsupported_verify,PASS,-134,1001,0,0,0,125163
+T1,3,palm,delete_test_record,PASS,0,1001,0,0,0,125435
+T1,3,palm,list_after_delete,PASS,0,1001,0,0,0,125499
+T1,3,palm,inventory_restored,PASS,0,1001,0,0,0,125502
+T1,3,palm,summary,PASS,0,1001,16,0,0,125507
+[1;32muart:~$ [m

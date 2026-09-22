@@ -1,0 +1,20 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/ {
+	aliases {
+		fingerprint = &fingerprint0;
+		biometrics = &fingerprint0;
+	};
+};
+
+&uart1 {
+	status = "okay";
+	current-speed = <57600>;
+	pinctrl-0 = <&uart1_default>;
+	pinctrl-names = "default";
+
+	fingerprint0: fingerprint0 {
+		compatible = "zhiantec,zfm-x0";
+		status = "okay";
+		comm-addr = <0xffffffff>;
+	};
+};

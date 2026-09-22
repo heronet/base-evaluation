@@ -1,0 +1,11 @@
+{
+  "note": "These driver/API hashes match the verified GT5 Test 1 build archive, including its inventory-error fix. build.py checks them before building without modifying source.",
+  "required_source_sha256": {
+    "drivers/biometrics/biometrics_gt5x.c": "522c507b24d2418a661e378b8281e15327caab24377c9ab1db3beefee5cf9106",
+    "drivers/biometrics/biometrics_gt5x.h": "49ab5918457e49d74f72af39af368b8a42b7f48227ed3aa41f2cd8bcaf05abbf",
+    "drivers/biometrics/Kconfig.gt5x": "e3978404847dae54d6ebbbb16fe4e36f33cf7f57fcd5278d4cd5a62c8de5f537",
+    "include/zephyr/drivers/biometrics.h": "ba1086e3db4d70ca947bb4411d3ea41682af34fbaf870cc28c6173415fef06ea"
+  },
+  "previous_test_archive_sha256": "cddd7093a5fd8a961dbc52ff800669383d4079a064462163a7622847f32215db",
+  "scheduling_reference_sha256": "6229df7d1c99227f92954581fb3268de448f6b1efb8b62f70c727a82252497da"
+}

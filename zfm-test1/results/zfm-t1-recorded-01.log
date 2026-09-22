@@ -1,0 +1,257 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8e220,len:0x1ce4
+load:0x40374000,len:0xa204
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: 21b0623d5939452dc59e37aabe15131aa07ce0701dc85a4f94ad88b72fbab958
+Expected: 00000000b0400000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40378264
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 22 2026 05:17:59
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8e220h size=01ce4h (  7396)
+I (boot): IRAM	: lma=00001d0ch vma=40374000h size=0a204h ( 41476)
+I (boot): RTC_DATA	: lma=0000bf18h vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0a7c0h ( 42944)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=02ff4h ( 12276)
+I (boot): libc heap size 340 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+*** Booting Zephyr OS build v4.4.0-15981-gfeecf52243a9 ***
+ZFM Test 1 v1.0 ready. Use z1 info, then z1 run 1.
+[m
+[1;32muart:~$ [mESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8e220,len:0x1ce4
+load:0x40374000,len:0xa204
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: 21b0623d5939452dc59e37aabe15131aa07ce0701dc85a4f94ad88b72fbab958
+Expected: 00000000b0400000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40378264
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 22 2026 05:17:59
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8e220h size=01ce4h (  7396)
+I (boot): IRAM	: lma=00001d0ch vma=40374000h size=0a204h ( 41476)
+I (boot): RTC_DATA	: lma=0000bf18h vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0a7c0h ( 42944)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=02ff4h ( 12276)
+I (boot): libc heap size 340 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+*** Booting Zephyr OS build v4.4.0-15981-gfeecf52243a9 ***
+ZFM Test 1 v1.0 ready. Use z1 info, then z1 run 1.
+[m
+[1;32muart:~$ [m
+#HOST_COMMAND z1 info
+z1 info
+Device: fingerprint0; inventory visibility: IDs 1..256 only
+Z1,0,device_ready,PASS,0,0,0,0,6495
+Z1,0,capabilities,PASS,0,0,0,0,6498
+Z1,0,caps_modalities_async,INFO,0,0,1,0,6501
+Z1,0,caps_samples_capacity,INFO,0,0,2,100,6505
+Z1,0,caps_storage_template_bytes,INFO,0,0,1,512,6509
+Z1,0,zfm_capability_contract,PASS,0,0,1,2,6514
+Z1,0,list_info_page0,PASS,0,0,0,0,6529
+Z1,0,page_inventory_valid,PASS,0,0,2,256,6531
+Z1,0,page_inventory_count,INFO,0,0,2,256,6535
+Z1,0,page_inventory_id,INFO,0,0,1,0,6540
+Z1,0,page_inventory_id,INFO,0,0,2,1,6543
+[1;32muart:~$ [m
+#HOST_COMMAND z1 run 1
+z1 run 1
+Z1,1,begin,INFO,0,0,1,0,15060
+Z1,1,device_ready,PASS,0,0,0,0,15062
+Z1,1,capabilities,PASS,0,0,0,0,15066
+Z1,1,caps_modalities_async,INFO,0,0,1,0,15068
+Z1,1,caps_samples_capacity,INFO,0,0,2,100,15072
+Z1,1,caps_storage_template_bytes,INFO,0,0,1,512,15077
+Z1,1,zfm_capability_contract,PASS,0,0,1,2,15081
+Z1,1,list_before_page0,PASS,0,0,0,0,15096
+Z1,1,page_inventory_valid,PASS,0,0,2,256,15099
+Z1,1,page_inventory_count,INFO,0,0,2,256,15103
+Z1,1,page_inventory_id,INFO,0,0,1,0,15107
+Z1,1,page_inventory_id,INFO,0,0,2,1,15111
+Z1,1,free_id_in_visible_page,PASS,0,3,3,100,15115
+Z1,1,inventory_scope,INFO,0,3,100,100,15119
+Z1,1,unsupported_callback,PASS,-88,3,0,0,15123
+Z1,1,unsupported_async_enroll,PASS,-88,3,0,0,15128
+Z1,1,unsupported_async_identify,PASS,-88,3,0,0,15132
+Z1,1,unsupported_async_verify,PASS,-88,3,0,0,15137
+Z1,1,unsupported_async_stop,PASS,-88,3,0,0,15141
+Z1,1,enroll_start,PASS,0,3,0,0,15146
+PLACE finger: enrollment sample 1/2 (within 30 seconds).
+Z1,1,enroll_capture,PASS,0,3,0,0,19560
+Z1,1,capture_progress,PASS,0,3,1,2,19562
+Z1,1,capture_id_quality,INFO,0,3,0,0,19566
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 2/2 (within 30 seconds).
+Z1,1,enroll_capture,PASS,0,3,0,0,24591
+Z1,1,capture_progress,PASS,0,3,2,2,24593
+Z1,1,capture_id_quality,INFO,0,3,0,0,24597
+Z1,1,enroll_finalize,PASS,0,3,0,0,24731
+Z1,1,list_after_enroll_page0,PASS,0,3,0,0,24744
+Z1,1,page_inventory_valid,PASS,0,3,3,256,24747
+Z1,1,page_inventory_count,INFO,0,3,3,256,24752
+Z1,1,page_inventory_id,INFO,0,3,1,0,24756
+Z1,1,page_inventory_id,INFO,0,3,2,1,24759
+Z1,1,page_inventory_id,INFO,0,3,3,2,24763
+Z1,1,only_test_id_added_page0,PASS,0,3,2,3,24767
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for verify (within 30 seconds).
+Z1,1,verify,PASS,0,3,0,0,33921
+Z1,1,match_score_quality,INFO,91,3,0,1,33923
+Z1,1,match_identity_modality,PASS,0,3,3,1,33927
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for identify (within 30 seconds).
+Z1,1,identify,PASS,0,3,0,0,39129
+Z1,1,match_score_quality,INFO,91,3,0,1,39131
+Z1,1,match_identity_modality,PASS,0,3,3,1,39134
+Z1,1,delete_test_id,PASS,0,3,0,0,39163
+Z1,1,list_after_delete_page0,PASS,0,3,0,0,39175
+Z1,1,page_inventory_valid,PASS,0,3,2,256,39179
+Z1,1,page_inventory_count,INFO,0,3,2,256,39183
+Z1,1,page_inventory_id,INFO,0,3,1,0,39187
+Z1,1,page_inventory_id,INFO,0,3,2,1,39190
+Z1,1,inventory_restored_page0,PASS,0,3,2,2,39194
+Z1,1,summary,PASS,0,3,0,0,39199
+Trial complete. Lift finger. The test template was deleted.
+[1;32muart:~$ [m
+#HOST_COMMAND z1 run 2
+z1 run 2
+Z1,2,begin,INFO,0,0,1,0,57340
+Z1,2,device_ready,PASS,0,0,0,0,57342
+Z1,2,capabilities,PASS,0,0,0,0,57346
+Z1,2,caps_modalities_async,INFO,0,0,1,0,57349
+Z1,2,caps_samples_capacity,INFO,0,0,2,100,57353
+Z1,2,caps_storage_template_bytes,INFO,0,0,1,512,57358
+Z1,2,zfm_capability_contract,PASS,0,0,1,2,57362
+Z1,2,list_before_page0,PASS,0,0,0,0,57377
+Z1,2,page_inventory_valid,PASS,0,0,2,256,57380
+Z1,2,page_inventory_count,INFO,0,0,2,256,57384
+Z1,2,page_inventory_id,INFO,0,0,1,0,57388
+Z1,2,page_inventory_id,INFO,0,0,2,1,57392
+Z1,2,free_id_in_visible_page,PASS,0,3,3,100,57396
+Z1,2,inventory_scope,INFO,0,3,100,100,57400
+Z1,2,unsupported_callback,PASS,-88,3,0,0,57404
+Z1,2,unsupported_async_enroll,PASS,-88,3,0,0,57408
+Z1,2,unsupported_async_identify,PASS,-88,3,0,0,57413
+Z1,2,unsupported_async_verify,PASS,-88,3,0,0,57418
+Z1,2,unsupported_async_stop,PASS,-88,3,0,0,57422
+Z1,2,enroll_start,PASS,0,3,0,0,57427
+PLACE finger: enrollment sample 1/2 (within 30 seconds).
+Z1,2,enroll_capture,PASS,0,3,0,0,60931
+Z1,2,capture_progress,PASS,0,3,1,2,60933
+Z1,2,capture_id_quality,INFO,0,3,0,0,60937
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 2/2 (within 30 seconds).
+Z1,2,enroll_capture,PASS,0,3,0,0,65510
+Z1,2,capture_progress,PASS,0,3,2,2,65512
+Z1,2,capture_id_quality,INFO,0,3,0,0,65516
+Z1,2,enroll_finalize,PASS,0,3,0,0,65650
+Z1,2,list_after_enroll_page0,PASS,0,3,0,0,65663
+Z1,2,page_inventory_valid,PASS,0,3,3,256,65667
+Z1,2,page_inventory_count,INFO,0,3,3,256,65671
+Z1,2,page_inventory_id,INFO,0,3,1,0,65675
+Z1,2,page_inventory_id,INFO,0,3,2,1,65678
+Z1,2,page_inventory_id,INFO,0,3,3,2,65682
+Z1,2,only_test_id_added_page0,PASS,0,3,2,3,65686
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for verify (within 30 seconds).
+Z1,2,verify,PASS,0,3,0,0,70504
+Z1,2,match_score_quality,INFO,91,3,0,1,70505
+Z1,2,match_identity_modality,PASS,0,3,3,1,70509
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for identify (within 30 seconds).
+Z1,2,identify,PASS,0,3,0,0,74673
+Z1,2,match_score_quality,INFO,91,3,0,1,74675
+Z1,2,match_identity_modality,PASS,0,3,3,1,74679
+Z1,2,delete_test_id,PASS,0,3,0,0,74707
+Z1,2,list_after_delete_page0,PASS,0,3,0,0,74720
+Z1,2,page_inventory_valid,PASS,0,3,2,256,74723
+Z1,2,page_inventory_count,INFO,0,3,2,256,74727
+Z1,2,page_inventory_id,INFO,0,3,1,0,74732
+Z1,2,page_inventory_id,INFO,0,3,2,1,74735
+Z1,2,inventory_restored_page0,PASS,0,3,2,2,74739
+Z1,2,summary,PASS,0,3,0,0,74743
+Trial complete. Lift finger. The test template was deleted.
+[1;32muart:~$ [m
+#HOST_COMMAND z1 run 3
+z1 run 3
+Z1,3,begin,INFO,0,0,1,0,83406
+Z1,3,device_ready,PASS,0,0,0,0,83408
+Z1,3,capabilities,PASS,0,0,0,0,83411
+Z1,3,caps_modalities_async,INFO,0,0,1,0,83415
+Z1,3,caps_samples_capacity,INFO,0,0,2,100,83419
+Z1,3,caps_storage_template_bytes,INFO,0,0,1,512,83423
+Z1,3,zfm_capability_contract,PASS,0,0,1,2,83428
+Z1,3,list_before_page0,PASS,0,0,0,0,83443
+Z1,3,page_inventory_valid,PASS,0,0,2,256,83446
+Z1,3,page_inventory_count,INFO,0,0,2,256,83450
+Z1,3,page_inventory_id,INFO,0,0,1,0,83454
+Z1,3,page_inventory_id,INFO,0,0,2,1,83458
+Z1,3,free_id_in_visible_page,PASS,0,3,3,100,83462
+Z1,3,inventory_scope,INFO,0,3,100,100,83466
+Z1,3,unsupported_callback,PASS,-88,3,0,0,83470
+Z1,3,unsupported_async_enroll,PASS,-88,3,0,0,83474
+Z1,3,unsupported_async_identify,PASS,-88,3,0,0,83478
+Z1,3,unsupported_async_verify,PASS,-88,3,0,0,83483
+Z1,3,unsupported_async_stop,PASS,-88,3,0,0,83487
+Z1,3,enroll_start,PASS,0,3,0,0,83492
+PLACE finger: enrollment sample 1/2 (within 30 seconds).
+Z1,3,enroll_capture,PASS,0,3,0,0,86080
+Z1,3,capture_progress,PASS,0,3,1,2,86082
+Z1,3,capture_id_quality,INFO,0,3,0,0,86086
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 2/2 (within 30 seconds).
+Z1,3,enroll_capture,PASS,0,3,0,0,90432
+Z1,3,capture_progress,PASS,0,3,2,2,90434
+Z1,3,capture_id_quality,INFO,0,3,0,0,90438
+Z1,3,enroll_finalize,PASS,0,3,0,0,90572
+Z1,3,list_after_enroll_page0,PASS,0,3,0,0,90585
+Z1,3,page_inventory_valid,PASS,0,3,3,256,90589
+Z1,3,page_inventory_count,INFO,0,3,3,256,90593
+Z1,3,page_inventory_id,INFO,0,3,1,0,90597
+Z1,3,page_inventory_id,INFO,0,3,2,1,90600
+Z1,3,page_inventory_id,INFO,0,3,3,2,90604
+Z1,3,only_test_id_added_page0,PASS,0,3,2,3,90608
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for verify (within 30 seconds).
+Z1,3,verify,PASS,0,3,0,0,96395
+Z1,3,match_score_quality,INFO,91,3,0,1,96397
+Z1,3,match_identity_modality,PASS,0,3,3,1,96401
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for identify (within 30 seconds).
+Z1,3,identify,PASS,0,3,0,0,101028
+Z1,3,match_score_quality,INFO,91,3,0,1,101029
+Z1,3,match_identity_modality,PASS,0,3,3,1,101034
+Z1,3,delete_test_id,PASS,0,3,0,0,101061
+Z1,3,list_after_delete_page0,PASS,0,3,0,0,101075
+Z1,3,page_inventory_valid,PASS,0,3,2,256,101078
+Z1,3,page_inventory_count,INFO,0,3,2,256,101082
+Z1,3,page_inventory_id,INFO,0,3,1,0,101086
+Z1,3,page_inventory_id,INFO,0,3,2,1,101090
+Z1,3,inventory_restored_page0,PASS,0,3,2,2,101094
+Z1,3,summary,PASS,0,3,0,0,101098
+Trial complete. Lift finger. The test template was deleted.
+[1;32muart:~$ [m

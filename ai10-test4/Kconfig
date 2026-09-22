@@ -1,0 +1,17 @@
+mainmenu "BASE Test 4"
+source "Kconfig.zephyr"
+
+choice T4_MODE
+	prompt "Test 4 application"
+	default T4_IDLE
+config T4_BASELINE
+	bool "UART-only baseline"
+config T4_IDLE
+	bool "AI10 enabled, idle"
+config T4_SYNC
+	bool "Synchronous identification"
+config T4_ASYNC
+	bool "Asynchronous identification"
+config T4_PROFILE
+	bool "Instrumented stack profile"
+endchoice

@@ -1,0 +1,244 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8e220,len:0x1ce4
+load:0x40374000,len:0xa204
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: dab974c0bf3b1a3d3c312d409ad1639fe8a0b57eb5436418214f29fe135e9a07
+Expected: 00000000b0400000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40378264
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 22 2026 12:40:23
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8e220h size=01ce4h (  7396)
+I (boot): IRAM	: lma=00001d0ch vma=40374000h size=0a204h ( 41476)
+I (boot): RTC_DATA	: lma=0000bf18h vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0a8d0h ( 43216)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=030a4h ( 12452)
+I (boot): libc heap size 341 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+
+#HOST_COMMAND 
+*** Booting Zephyr OS build v4.4.0-15981-gfeecf52243a9 ***
+GT5 Test 1 v1.0 ready. Use g1 info, then g1 run 1.
+[m
+[1;32muart:~$ [m
+#HOST_COMMAND g1 run 3
+g1 run 3
+G1,3,begin,INFO,0,0,1,0,8884
+Scanning all 200 template slots; please wait.
+G1,3,device_ready,PASS,0,0,0,0,8890
+G1,3,capabilities,PASS,0,0,0,0,8894
+G1,3,caps_modalities_async,INFO,0,0,1,0,8896
+G1,3,caps_samples_capacity,INFO,0,0,3,200,8901
+G1,3,caps_storage_template_bytes,INFO,0,0,1,498,8905
+G1,3,gt5_capability_contract,PASS,0,0,1,3,8910
+G1,3,list_before,PASS,0,0,0,0,21061
+G1,3,inventory_valid,PASS,0,0,0,200,21063
+G1,3,inventory_count,INFO,0,0,0,200,21066
+G1,3,free_id_in_inventory,PASS,0,1,1,200,21070
+G1,3,inventory_scope,INFO,0,1,200,200,21074
+G1,3,unsupported_callback,PASS,-88,1,0,0,21078
+G1,3,unsupported_async_enroll,PASS,-88,1,0,0,21082
+G1,3,unsupported_async_identify,PASS,-88,1,0,0,21087
+G1,3,unsupported_async_verify,PASS,-88,1,0,0,21092
+G1,3,unsupported_async_stop,PASS,-88,1,0,0,21096
+G1,3,enroll_start,PASS,0,1,0,0,21162
+PLACE finger: enrollment sample 1/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,3,enroll_capture,PASS,0,1,0,0,23275
+G1,3,capture_progress,PASS,0,1,1,3,23276
+G1,3,capture_id_quality,INFO,0,1,0,0,23281
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 2/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,3,enroll_capture,PASS,0,1,0,0,29133
+G1,3,capture_progress,PASS,0,1,2,3,29135
+G1,3,capture_id_quality,INFO,0,1,0,0,29140
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 3/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,3,enroll_capture,PASS,0,1,0,0,34251
+G1,3,capture_progress,PASS,0,1,3,3,34253
+G1,3,capture_id_quality,INFO,0,1,0,0,34257
+G1,3,capture3_commit_acknowledged,INFO,0,1,1,0,34261
+LIFT finger now; checking the stored template.
+G1,3,enroll_finalize,PASS,0,1,0,0,34331
+G1,3,list_after_enroll,PASS,0,1,0,0,46481
+G1,3,inventory_valid,PASS,0,1,1,200,46483
+G1,3,inventory_count,INFO,0,1,1,200,46487
+G1,3,inventory_id,INFO,0,1,1,0,46491
+G1,3,only_test_id_added,PASS,0,1,0,1,46494
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for verify (within 30 seconds).
+G1,3,verify,PASS,0,1,0,0,52062
+G1,3,match_score_quality,INFO,0,1,0,1,52063
+G1,3,match_identity_modality,PASS,0,1,1,1,52067
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for identify (within 30 seconds).
+G1,3,identify,PASS,0,1,0,0,59190
+G1,3,match_score_quality,INFO,0,1,0,1,59191
+G1,3,match_identity_modality,PASS,0,1,1,1,59195
+G1,3,delete_test_id,PASS,0,1,0,0,59392
+G1,3,list_after_delete,PASS,0,1,0,0,71540
+G1,3,inventory_valid,PASS,0,1,0,200,71543
+G1,3,inventory_count,INFO,0,1,0,200,71546
+G1,3,inventory_restored,PASS,0,1,0,0,71551
+G1,3,summary,PASS,0,1,0,0,71554
+Trial complete. Lift finger. The test template was deleted.
+[1;32muart:~$ [m
+#HOST_COMMAND g1 run 2
+g1 run 2
+[1;31mUse a new increasing positive trial number: g1 run 1
+[m[1;32muart:~$ [m
+#HOST_COMMAND g1 run 4
+g1 run 4
+G1,4,begin,INFO,0,0,1,0,90774
+Scanning all 200 template slots; please wait.
+G1,4,device_ready,PASS,0,0,0,0,90780
+G1,4,capabilities,PASS,0,0,0,0,90784
+G1,4,caps_modalities_async,INFO,0,0,1,0,90787
+G1,4,caps_samples_capacity,INFO,0,0,3,200,90791
+G1,4,caps_storage_template_bytes,INFO,0,0,1,498,90796
+G1,4,gt5_capability_contract,PASS,0,0,1,3,90800
+G1,4,list_before,PASS,0,0,0,0,102951
+G1,4,inventory_valid,PASS,0,0,0,200,102953
+G1,4,inventory_count,INFO,0,0,0,200,102958
+G1,4,free_id_in_inventory,PASS,0,1,1,200,102961
+G1,4,inventory_scope,INFO,0,1,200,200,102965
+G1,4,unsupported_callback,PASS,-88,1,0,0,102969
+G1,4,unsupported_async_enroll,PASS,-88,1,0,0,102974
+G1,4,unsupported_async_identify,PASS,-88,1,0,0,102978
+G1,4,unsupported_async_verify,PASS,-88,1,0,0,102983
+G1,4,unsupported_async_stop,PASS,-88,1,0,0,102987
+G1,4,enroll_start,PASS,0,1,0,0,103054
+PLACE finger: enrollment sample 1/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,4,enroll_capture,PASS,0,1,0,0,104621
+G1,4,capture_progress,PASS,0,1,1,3,104623
+G1,4,capture_id_quality,INFO,0,1,0,0,104627
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 2/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,4,enroll_capture,PASS,0,1,0,0,109206
+G1,4,capture_progress,PASS,0,1,2,3,109209
+G1,4,capture_id_quality,INFO,0,1,0,0,109212
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 3/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,4,enroll_capture,PASS,0,1,0,0,113819
+G1,4,capture_progress,PASS,0,1,3,3,113822
+G1,4,capture_id_quality,INFO,0,1,0,0,113825
+G1,4,capture3_commit_acknowledged,INFO,0,1,1,0,113829
+LIFT finger now; checking the stored template.
+G1,4,enroll_finalize,PASS,0,1,0,0,113899
+G1,4,list_after_enroll,PASS,0,1,0,0,126049
+G1,4,inventory_valid,PASS,0,1,1,200,126051
+G1,4,inventory_count,INFO,0,1,1,200,126055
+G1,4,inventory_id,INFO,0,1,1,0,126059
+G1,4,only_test_id_added,PASS,0,1,0,1,126062
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for verify (within 30 seconds).
+G1,4,verify,PASS,0,1,0,0,130190
+G1,4,match_score_quality,INFO,0,1,0,1,130192
+G1,4,match_identity_modality,PASS,0,1,1,1,130195
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for identify (within 30 seconds).
+G1,4,identify,PASS,0,1,0,0,134782
+G1,4,match_score_quality,INFO,0,1,0,1,134784
+G1,4,match_identity_modality,PASS,0,1,1,1,134788
+G1,4,delete_test_id,PASS,0,1,0,0,134984
+G1,4,list_after_delete,PASS,0,1,0,0,147134
+G1,4,inventory_valid,PASS,0,1,0,200,147137
+G1,4,inventory_count,INFO,0,1,0,200,147140
+G1,4,inventory_restored,PASS,0,1,0,0,147144
+G1,4,summary,PASS,0,1,0,0,147148
+Trial complete. Lift finger. The test template was deleted.
+[1;32muart:~$ [m
+#HOST_COMMAND g1 run 5
+g1 run 5
+G1,5,begin,INFO,0,0,1,0,152761
+Scanning all 200 template slots; please wait.
+G1,5,device_ready,PASS,0,0,0,0,152767
+G1,5,capabilities,PASS,0,0,0,0,152771
+G1,5,caps_modalities_async,INFO,0,0,1,0,152774
+G1,5,caps_samples_capacity,INFO,0,0,3,200,152778
+G1,5,caps_storage_template_bytes,INFO,0,0,1,498,152783
+G1,5,gt5_capability_contract,PASS,0,0,1,3,152787
+G1,5,list_before,PASS,0,0,0,0,164939
+G1,5,inventory_valid,PASS,0,0,0,200,164941
+G1,5,inventory_count,INFO,0,0,0,200,164945
+G1,5,free_id_in_inventory,PASS,0,1,1,200,164949
+G1,5,inventory_scope,INFO,0,1,200,200,164953
+G1,5,unsupported_callback,PASS,-88,1,0,0,164957
+G1,5,unsupported_async_enroll,PASS,-88,1,0,0,164961
+G1,5,unsupported_async_identify,PASS,-88,1,0,0,164966
+G1,5,unsupported_async_verify,PASS,-88,1,0,0,164971
+G1,5,unsupported_async_stop,PASS,-88,1,0,0,164975
+G1,5,enroll_start,PASS,0,1,0,0,165042
+PLACE finger: enrollment sample 1/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,5,enroll_capture,PASS,0,1,0,0,167117
+G1,5,capture_progress,PASS,0,1,1,3,167119
+G1,5,capture_id_quality,INFO,0,1,0,0,167123
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 2/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,5,enroll_capture,PASS,0,1,0,0,171702
+G1,5,capture_progress,PASS,0,1,2,3,171704
+G1,5,capture_id_quality,INFO,0,1,0,0,171708
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE finger: enrollment sample 3/3 (within 30 seconds).
+Hold until LIFT. The driver may wait 5 seconds before that prompt.
+G1,5,enroll_capture,PASS,0,1,0,0,176577
+G1,5,capture_progress,PASS,0,1,3,3,176579
+G1,5,capture_id_quality,INFO,0,1,0,0,176583
+G1,5,capture3_commit_acknowledged,INFO,0,1,1,0,176587
+LIFT finger now; checking the stored template.
+G1,5,enroll_finalize,PASS,0,1,0,0,176657
+G1,5,list_after_enroll,PASS,0,1,0,0,188806
+G1,5,inventory_valid,PASS,0,1,1,200,188809
+G1,5,inventory_count,INFO,0,1,1,200,188812
+G1,5,inventory_id,INFO,0,1,1,0,188817
+G1,5,only_test_id_added,PASS,0,1,0,1,188820
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for verify (within 30 seconds).
+G1,5,verify,PASS,0,1,0,0,193702
+G1,5,match_score_quality,INFO,0,1,0,1,193703
+G1,5,match_identity_modality,PASS,0,1,1,1,193707
+LIFT your finger now. Keep it OFF for 3 seconds.
+PLACE the SAME finger for identify (within 30 seconds).
+G1,5,identify,PASS,0,1,0,0,197786
+G1,5,match_score_quality,INFO,0,1,0,1,197788
+G1,5,match_identity_modality,PASS,0,1,1,1,197792
+G1,5,delete_test_id,PASS,0,1,0,0,197989
+G1,5,list_after_delete,PASS,0,1,0,0,210138
+G1,5,inventory_valid,PASS,0,1,0,200,210141
+G1,5,inventory_count,INFO,0,1,0,200,210144
+G1,5,inventory_restored,PASS,0,1,0,0,210149
+G1,5,summary,PASS,0,1,0,0,210153
+Trial complete. Lift finger. The test template was deleted.
+[1;32muart:~$ [m
+#HOST_COMMAND g1 info
+g1 info
+Device: fingerprint0; configured inventory: IDs 1..200
+G1,0,device_ready,PASS,0,1,0,0,261450
+G1,0,capabilities,PASS,0,1,0,0,261453
+G1,0,caps_modalities_async,INFO,0,1,1,0,261457
+G1,0,caps_samples_capacity,INFO,0,1,3,200,261461
+G1,0,caps_storage_template_bytes,INFO,0,1,1,498,261465
+G1,0,gt5_capability_contract,PASS,0,1,1,3,261470
+G1,0,list_info,PASS,0,1,0,0,273621
+G1,0,inventory_valid,PASS,0,1,0,200,273623
+G1,0,inventory_count,INFO,0,1,0,200,273627
+[1;32muart:~$ [m

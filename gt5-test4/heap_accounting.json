@@ -1,0 +1,21 @@
+{
+  "method": "Source-level allocation-request accounting; NOT a runtime allocator measurement.",
+  "scope": "Verified GT5 source and supplied template-size=498 overlay; successful initialization plus no-finger identification.",
+  "configured_kernel_heap_pool_bytes": 4096,
+  "persistent_template_buffer_requested_bytes": 498,
+  "initialization_transient_packet_requested_bytes": 30,
+  "initialization_simultaneous_requested_payload_bytes": 528,
+  "additional_allocation_requests_on_no_finger_identify_path": 0,
+  "outside_profile": {
+    "template_transfer_transient_packet_requested_bytes": 504,
+    "persistent_plus_one_template_packet_requested_payload_bytes": 1002
+  },
+  "limitations": [
+    "Excludes allocator headers, rounding, fragmentation and other platform allocations.",
+    "Configured heap capacity is not observed live/peak heap usage.",
+    "Do not add allocation requests to native RAM totals: a linked heap pool already reserves their storage.",
+    "The template_buf pointer is included in gt5x_data; its dynamically allocated payload is not.",
+    "Inspect native reports for actual retained heap storage in each image; matching Kconfig requests do not prove identical linked storage.",
+    "Template transfer paths are not exercised by this test."
+  ]
+}
