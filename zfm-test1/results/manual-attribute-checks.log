@@ -1,0 +1,135 @@
+uart:~$ biometrics info fingerprint0
+Device: fingerprint0
+  Modalities: fingerprint
+  Max templates: 100
+  Template size: 512 bytes
+  Storage modes: device
+  Enrollment samples: 2
+uart:~$
+uart:~$ biometrics attr_get fingerprint0 match_threshold
+match_threshold = 0
+uart:~$
+uart:~$ biometrics attr_get fingerprint0 security_level
+security_level = 6
+uart:~$ biometrics template_list fingerprint0
+Templates (1):
+  2
+uart:~$ biometrics match fingerprint0 verify 1 10000
+No match
+uart:~$
+uart:~$ biometrics match fingerprint0 identify 10000
+No match
+uart:~$ biometrics en
+  enroll           enroll_start     enroll_capture   enroll_finalize
+  enroll_abort
+uart:~$ biometrics enroll fingerprint0 1
+Enrolling ID 1 (2 samples)
+Capture 1/2...
+  Quality: 0
+Capture 2/2...
+Capture failed [-5]
+[00:01:08.577,000] <inf> zfm_x0: Enrollment started for ID 1
+[00:01:11.159,000] <inf> zfm_x0: Enrollment capture completed (sample 1/2)
+[00:01:11.995,000] <err> zfm_x0: Image conversion failed: 7
+uart:~$ biometrics enroll fingerprint0 1
+Enrolling ID 1 (2 samples)
+Capture 1/2...
+  Quality: 0
+Capture 2/2...
+  Quality: 0
+Enrollment complete
+[00:01:18.028,000] <inf> zfm_x0: Enrollment started for ID 1
+[00:01:19.472,000] <inf> zfm_x0: Enrollment capture completed (sample 1/2)
+[00:01:20.236,000] <inf> zfm_x0: Enrollment capture completed (sample 2/2)
+[00:01:20.366,000] <inf> zfm_x0: Enrollment completed for ID 1
+uart:~$ biometrics match fingerprint0 identify 10000
+No match
+uart:~$ biometrics match fingerprint0 identify 10000
+No match
+uart:~$ biometrics match fingerprint0 identify 10000
+Match! ID: 1, confidence: 91, quality: 0
+[00:01:40.912,000] <inf> zfm_x0: Match completed (mode=1, score=91)
+uart:~$ biometrics attr_set fingerprint0 match_threshold 65535
+uart:~$
+uart:~$ biometrics match fingerprint0 verify 1 10000
+No match
+uart:~$
+uart:~$ biometrics match fingerprint0 identify 10000
+No match
+uart:~$ biometrics attr_set fingerprint0 match_threshold 0
+uart:~$ biometrics match fingerprint0 verify 1 10000
+Match! ID: 1, confidence: 91, quality: 0
+uart:~$
+[00:02:30.054,000] <inf> zfm_x0: Match completed (mode=0, score=91)
+uart:~$ biometrics match fingerprint0 identify 10000
+Match! ID: 1, confidence: 91, quality: 0
+[00:02:36.141,000] <inf> zfm_x0: Match completed (mode=1, score=91)
+uart:~$ biometrics attr_set fingerprint0 match_threshold -1
+Failed to set attribute [-22]
+uart:~$ biometrics attr_set fingerprint0 match_threshold 65536
+Failed to set attribute [-22]
+uart:~$ biometrics attr_set fingerprint0 enrollment_quality 50
+Failed to set attribute [-134]
+uart:~$ biometrics attr_get fingerprint0 enrollment_quality
+Failed to get attribute [-134]
+uart:~$ biometrics attr_get fingerprint0 image_quality
+Failed to get attribute [-134]
+uart:~$ biometrics attr_set fingerprint0 security_level 7
+uart:~$ biometrics attr_get fingerprint0 security_level
+security_level = 8
+uart:~$ ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x2b (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8fdf0,len:0x2128
+load:0x40374000,len:0xbdd4
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: 4ab263ea071033cd601323325356344c973ee34550822d2fb4e20328c953a28e
+Expected: 0000000090200000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40379de0
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 23 2026 17:41:52
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM  : lma=00000020h vma=3fc8fdf0h size=02128h (  8488)
+I (boot): IRAM  : lma=00002150h vma=40374000h size=0bdd4h ( 48596)
+I (boot): RTC_DATA      : lma=0000df2ch vma=50000000h size=00024h (    36)
+I (boot): IROM  : lma=00010000h vma=42000000h size=0bf70h ( 49008)
+I (boot): DROM  : lma=00020000h vma=3c010000h size=03d54h ( 15700)
+I (boot): libc heap size 326 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+
+[00:00:00.029,000] <inf> zfm_x0: ZFM-x0 initialized: 2/100 templates
+*** Booting Zephyr OS build v4.4.0-15982-ga22a1f470cca ***
+[00:00:00.029,000] <inf> main: Fingerprint Sensor Test
+[00:00:00.029,000] <inf> main: Sensor capabilities:
+[00:00:00.029,000] <inf> main:   Max templates: 100
+[00:00:00.029,000] <inf> main:   Template size: 512 bytes
+[00:00:00.029,000] <inf> main:   Enrollment samples: 2
+[00:00:00.029,000] <inf> main: Enroll two fingers
+[00:00:00.029,000] <inf> main: Enrolling finger ID 1
+[00:00:00.029,000] <inf> zfm_x0: Enrollment started for ID 1
+[00:00:00.029,000] <inf> main: Place finger...
+[00:00:05.049,000] <inf> main: Enrolling finger ID 2
+[00:00:05.049,000] <inf> zfm_x0: Enrollment started for ID 2
+[00:00:05.049,000] <inf> main: Place finger...
+uart:~$ biometrics attr_get fingerprint0 security_level
+security_level = 8
+uart:~$
+uart:~$
+[00:00:10.081,000] <inf> main: Found 2 stored template(s):
+[00:00:10.081,000] <inf> main:   - Template ID: 1
+[00:00:10.081,000] <inf> main:   - Template ID: 2
+[00:00:10.081,000] <inf> main: Verifying finger against ID 1
+[00:00:10.081,000] <inf> main: Place finger...
+[00:00:15.101,000] <wrn> main: Timeout
+[00:00:15.101,000] <inf> main: Searching for any enrolled finger...
+uart:~$

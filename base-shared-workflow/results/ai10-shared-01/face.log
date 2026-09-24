@@ -1,0 +1,68 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8feb0,len:0x20fc
+load:0x40374000,len:0xbea0
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: 4dcba9a7b13a9cf58aa5be0567bc5e6a7ff1cf137432e68257ef74474ff01c73
+Expected: 00000000f01f0000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40379ec4
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 25 2026 04:02:37
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8feb0h size=020fch (  8444)
+I (boot): IRAM	: lma=00002124h vma=40374000h size=0bea0h ( 48800)
+I (boot): RTC_DATA	: lma=0000dfcch vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0bc10h ( 48144)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=03424h ( 13348)
+I (boot): libc heap size 311 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+[m
+[1;32muart:~$ [m[8D[J*** Booting Zephyr OS build v4.4.0-15982-ga22a1f470cca ***
+[1;32muart:~$ [m[8D[J[1;32muart:~$ [mbase run face
+BASE,1,4364,begin,ai10-shared-01,1,4
+BASE,2,4368,caps,20,2000,0,3,1
+BASE,3,4430,inventory,baseline,0,0
+BASE,4,4432,idle,0
+BASE,5,4434,phase,interruption
+Recovery test: KEEP FACE AND PALM OUT OF VIEW. Cancellation in 5 seconds.
+BASE,6,9444,start_managed,0
+BASE,7,14461,stop,0
+BASE,8,14462,event,4,-140,14461
+BASE,9,14464,idle,0
+BASE,10,14466,recovery_operation,0
+BASE,11,14648,inventory,after_interrupt,0,0
+BASE,12,14650,interrupted_inventory_equal,1
+BASE,13,14710,inventory,recovery_cleanup,0,0
+BASE,14,14776,inventory,restored,0,0
+BASE,15,14778,restoration,recovery_cleanup,0
+BASE,16,14782,recovery,0
+BASE,17,14784,phase,successful_workflow
+Enrollment begins in 5 seconds. Use a finger/face/palm NOT already enrolled.
+BASE,18,19795,start_managed,0
+BASE,19,32177,event,2,0,32177
+BASE,20,32178,enrolled,1,4
+BASE,21,32289,event,4,0,32289
+BASE,22,32290,idle,0
+BASE,23,32292,enrollment,0,1
+BASE,24,32355,inventory,after_enrollment,0,1
+BASE,25,32358,id,after_enrollment,1
+Identification begins in 3 seconds. Present the newly enrolled sample.
+BASE,26,39202,identify,0,1,4,0
+BASE,27,39264,inventory,final_cleanup,0,1
+BASE,28,39267,id,final_cleanup,1
+BASE,29,39531,delete_new,1,0
+BASE,30,39595,inventory,restored,0,0
+BASE,31,39597,restoration,final_cleanup,0
+BASE,32,39601,end,PASS,0
+[1;32muart:~$ [m

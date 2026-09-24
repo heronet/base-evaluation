@@ -1,5 +1,5 @@
 {
-  "note": "These driver/API hashes match the verified GT5 Test 1 build archive, including its inventory-error fix. build.py checks them before building without modifying source.",
+  "note": "build.py verifies the driver/API source hashes before building.",
   "required_source_sha256": {
     "drivers/biometrics/biometrics_gt5x.c": "522c507b24d2418a661e378b8281e15327caab24377c9ab1db3beefee5cf9106",
     "drivers/biometrics/biometrics_gt5x.h": "49ab5918457e49d74f72af39af368b8a42b7f48227ed3aa41f2cd8bcaf05abbf",

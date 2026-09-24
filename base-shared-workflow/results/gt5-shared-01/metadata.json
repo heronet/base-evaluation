@@ -1,0 +1,24 @@
+{
+  "tag": "gt5-shared-01",
+  "profile": "gt5",
+  "board": "weact_esp32s3_b/esp32s3/procpu",
+  "status": "BUILD_COMPLETE",
+  "differences_from_supplied_zip": [],
+  "zephyr_commit": "a22a1f470cca80b11cc29b56ee530f35c5ea8f7d",
+  "command": [
+    "west",
+    "build",
+    "-p",
+    "always",
+    "-b",
+    "weact_esp32s3_b/esp32s3/procpu",
+    "-d",
+    "/Users/sirat/Source/embedded/zephyr/samples/drivers/biometrics/base-shared-workflow/build/gt5-shared-01",
+    "/Users/sirat/Source/embedded/zephyr/samples/drivers/biometrics/base-shared-workflow",
+    "--",
+    "-DZEPHYR_BASE=/Users/sirat/Source/embedded/zephyr",
+    "-DDTC_OVERLAY_FILE=/Users/sirat/Source/embedded/zephyr/samples/drivers/biometrics/base-shared-workflow/profiles/gt5.overlay",
+    "-DEXTRA_CONF_FILE=/Users/sirat/Source/embedded/zephyr/samples/drivers/biometrics/base-shared-workflow/profiles/gt5.conf",
+    "-DBASE_BUILD_TAG=gt5-shared-01"
+  ]
+}

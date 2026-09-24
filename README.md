@@ -6,27 +6,31 @@ Test applications and recorded evidence for **BASE: A Capability-Driven Biometri
 
 Log names below are relative to each application's `results/` directory.
 
-| Application | Experiment | Console command | Recorded log |
-| --- | --- | --- | --- |
-| `ai10-test1` | E1: face and palm workflows | `t1 run <n> face no` or `t1 run <n> palm no` | `ai10-t1-recorded-01.log` |
-| `gt5-test1` | E1: staged fingerprint workflows | `g1 run <n>` | `gt5-t1-recorded-03.log` |
-| `zfm-test1` | E1: staged fingerprint workflows | `z1 run <n>` | `zfm-t1-recorded-01.log` |
-| `ai10-test2` | E2: lifecycle and recovery | `t2 run <n>` | `ai10-t2a-recorded-01.log` |
-| `ai10-test2b` | E2: held terminal callback | `t2b run <n>` | `ai10-t2b-recorded-01.log` |
-| `ai10-test3` | E3: scheduling | `t3 run <n>` | `ai10-t3-recorded-01.log` |
-| `gt5-test3` | E3: scheduling | `t3 run <n>` | `gt5-t3-recorded-01.log` |
-| `zfm-test3` | E3: scheduling | `t3 run <n>` | `zfm-t3-recorded-01.log` |
-| `ai10-test4` | E4: resources | Runs automatically at boot | `ai10-t4-profile-01.log` |
-| `gt5-test4` | E4: resources | Runs automatically at boot | `gt5-t4-profile-01.log` |
-| `zfm-test4` | E4: resources | Runs automatically at boot | `zfm-t4-profile-01.log` |
+| Application   | Experiment                       | Console command                              | Recorded log               |
+| ------------- | -------------------------------- | -------------------------------------------- | -------------------------- |
+| `ai10-test1`  | E1: face and palm workflows      | `t1 run <n> face no` or `t1 run <n> palm no` | `ai10-t1-recorded-01.log`  |
+| `gt5-test1`   | E1: staged fingerprint workflows | `g1 run <n>`                                 | `gt5-t1-recorded-03.log`   |
+| `zfm-test1`   | E1: staged fingerprint workflows | `z1 run <n>`                                 | `zfm-t1-recorded-01.log`   |
+| `ai10-test2`  | E2: lifecycle and recovery       | `t2 run <n>`                                 | `ai10-t2a-recorded-01.log` |
+| `ai10-test2b` | E2: held terminal callback       | `t2b run <n>`                                | `ai10-t2b-recorded-01.log` |
+| `ai10-test3`  | E3: scheduling                   | `t3 run <n>`                                 | `ai10-t3-recorded-01.log`  |
+| `gt5-test3`   | E3: scheduling                   | `t3 run <n>`                                 | `gt5-t3-recorded-01.log`   |
+| `zfm-test3`   | E3: scheduling                   | `t3 run <n>`                                 | `zfm-t3-recorded-01.log`   |
+| `ai10-test4`  | E4: resources                    | Runs automatically at boot                   | `ai10-t4-profile-01.log`   |
+| `gt5-test4`   | E4: resources                    | Runs automatically at boot                   | `gt5-t4-profile-01.log`    |
+| `zfm-test4`   | E4: resources                    | Runs automatically at boot                   | `zfm-t4-profile-01.log`    |
 
-E1 contains three successful workflows per fingerprint device and three each for AI10 face and palm. GT-5X's recorded workflow IDs are 3, 4, and 5. E2 contains three suites per application: 42 accepted operations in Test 2A and 12 in Test 2B, including recovery. E3 contains three suites per device: 10,800 AI10 jobs and 7,200 jobs for each fingerprint device, totaling 25,200 jobs.
+The shared-application experiment (E1) is in [`base-shared-workflow/`](base-shared-workflow/). Four recorded runs cover ZFM-X0 fingerprint, GT-5X fingerprint, and AI10 face and palm, exercising interrupted enrollment, subsequent enrollment and identification, and inventory restoration. Its README provides build and run instructions.
 
-All listed logs are preserved as complete files. E4 uses AI10 session 1 and GT-5X/ZFM-X0 session 2. The latter two files retain their incomplete first sessions. Earlier pilot logs are outside this package's reported dataset.
+Manual fingerprint attribute-check transcripts are retained as `manual-attribute-checks.log` in the `gt5-test1/results/` and `zfm-test1/results/` directories.
+
+The device-specific E1 tests contain three completed workflows per fingerprint device and three each for AI10 face and palm. GT-5X's recorded workflow IDs are 3, 4, and 5. E2 contains three suites per application: 42 accepted operations in Test 2A and 12 in Test 2B, including recovery. E3 contains three suites per device: 10,800 AI10 jobs and 7,200 jobs for each fingerprint device, totaling 25,200 jobs.
+
+All listed logs are preserved as complete files. E4 uses AI10 session 1 and GT-5X/ZFM-X0 session 2. The latter two files retain their incomplete first sessions.
 
 ## Setup
 
-Recorded builds use the WeAct ESP32-S3-B target `weact_esp32s3_b/esp32s3/procpu`, Zephyr base commit `feecf52243a9a86a59aaedcd1387ccc8145f816c` (4.4.99), and Zephyr SDK 1.0.1 / Xtensa GCC 14.3.0. Use a Zephyr checkout containing the corresponding BASE API, drivers, and bindings. These sources and their hashes are retained in the build ZIPs under `results/`; the base commit alone does not identify local biometric changes.
+Experiments target the WeAct ESP32-S3-B (`weact_esp32s3_b/esp32s3/procpu`). Build metadata, resolved configurations, biometric API/driver/binding snapshots, and source hashes are retained with the recorded results. The corresponding build records identify the software used for each archived build. To reproduce an archived experiment, use the biometric sources under `sources/` in that experiment's build archive.
 
 Connect one module at a time using the application's `app.overlay`. The overlays select UART1 with the board's `uart1_default` pins: connect module TX to board RX and module RX to board TX, with a common ground and the module's specified supply. Sensor baud rates are 115200 for AI10, 9600 for GT-5X, and 57600 for ZFM-X0. The console uses 115200 baud for all devices. Resolved pin assignments are recorded in the archived `zephyr.dts` files.
 

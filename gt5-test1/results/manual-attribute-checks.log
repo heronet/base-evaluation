@@ -1,0 +1,34 @@
+uart:~$ biometrics attr_set fingerprint0 match_threshold 100
+Failed to set attribute [-134]
+uart:~$ biometrics attr_get fingerprint0 match_threshold
+Failed to get attribute [-134]
+uart:~$ biometrics attr_set fingerprint0 enrollment_quality 50
+Failed to set attribute [-134]
+uart:~$ biometrics attr_get fingerprint0 enrollment_quality
+Failed to get attribute [-134]
+uart:~$ biometrics attr_set fingerprint0 security_level 5
+Failed to set attribute [-134]
+uart:~$ biometrics attr_get fingerprint0 security_level
+Failed to get attribute [-134]
+uart:~$ biometrics attr_get fingerprint0 image_quality
+Failed to get attribute [-134]
+uart:~$ biometrics attr_set fingerprint0 timeout_ms 2000
+uart:~$ biometrics attr_get fingerprint0 timeout_ms
+timeout_ms = 2000
+uart:~$ biometrics match fingerprint0 identify -1
+Match failed [-116]
+uart:~$ biometrics match fingerprint0 identify 5000
+Match failed [-116]
+uart:~$ biometrics attr_set fingerprint0 timeout_ms -1
+Failed to set attribute [-22]
+uart:~$ biometrics attr_set fingerprint0 timeout_ms 3600001
+Failed to set attribute [-22]
+uart:~$ biometrics match fingerprint0 verify 1 10000
+No match
+uart:~$ biometrics match fingerprint0 verify 2 10000
+No match
+uart:~$ biometrics match fingerprint0 identify 10000
+No match
+uart:~$ biometrics match fingerprint0 identify 10000
+Match! ID: 1, confidence: 0, quality: 0
+[00:05:28.512,000] <inf> gt5x: Identification successful, matched ID 1

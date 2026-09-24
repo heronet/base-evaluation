@@ -1,0 +1,11 @@
+# SPDX-License-Identifier: Apache-2.0
+mainmenu "BASE shared workflow"
+source "Kconfig.zephyr"
+config BASE_INVENTORY_COVERAGE
+    int "Largest device capacity fully covered by the evaluated inventory driver"
+    default 4096
+    range 1 4096
+    help
+      Fail before enrollment if advertised capacity exceeds the reviewed
+      inventory coverage. The supplied ZFM implementation reads only page 0,
+      so its profile restricts advertised capacity to at most 256.

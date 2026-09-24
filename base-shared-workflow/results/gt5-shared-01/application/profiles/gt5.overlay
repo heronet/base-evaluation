@@ -1,0 +1,21 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+/ {
+    aliases {
+        fingerprint = &fingerprint0;
+        biometrics = &fingerprint0;
+    };
+};
+
+&uart1 {
+    status = "okay";
+    pinctrl-0 = <&uart1_default>;
+    pinctrl-names = "default";
+	current-speed = <9600>;
+
+    fingerprint0: fingerprint0 {
+        compatible = "adh-tech,gt5x";
+        status = "okay";
+        max-templates = <200>;
+        template-size = <498>;
+    };
+};

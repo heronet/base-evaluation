@@ -1,0 +1,109 @@
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8fe60,len:0x2108
+load:0x40374000,len:0xbe4c
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: ed0208368f30552e624679b21e50a316d53d122bf41a373ac1c0bbbd330d5860
+Expected: 0000000040200000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40379e70
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 25 2026 03:29:34
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8fe60h size=02108h (  8456)
+I (boot): IRAM	: lma=00002130h vma=40374000h size=0be4ch ( 48716)
+I (boot): RTC_DATA	: lma=0000df84h vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0bd30h ( 48432)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=035b4h ( 13748)
+I (boot): libc heap size 314 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+[m
+[1;32muart:~$ [m[8D[J*** Booting Zephyr OS build v4.4.0-15982-ga22a1f470cca ***
+[1;32muart:~$ [m[8D[J[1;32muart:~$ [mESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fc8fe60,len:0x2108
+load:0x40374000,len:0xbe4c
+load:0x50000000,len:0x24
+SHA-256 comparison failed:
+Calculated: ed0208368f30552e624679b21e50a316d53d122bf41a373ac1c0bbbd330d5860
+Expected: 0000000040200000000000000000000000000000000000000000000000000000
+Attempting to boot anyway...
+entry 0x40379e70
+I (soc_init): ESP Simple boot
+I (soc_init): compile time Sep 25 2026 03:29:34
+W (soc_init): Unicore bootloader
+I (soc_init): chip revision: v0.2
+I (flash_init): Boot SPI Speed : 80MHz
+I (flash_init): SPI Mode       : DIO
+I (flash_init): SPI Flash Size : 16MB
+I (boot): DRAM	: lma=00000020h vma=3fc8fe60h size=02108h (  8456)
+I (boot): IRAM	: lma=00002130h vma=40374000h size=0be4ch ( 48716)
+I (boot): RTC_DATA	: lma=0000df84h vma=50000000h size=00024h (    36)
+I (boot): IROM	: lma=00010000h vma=42000000h size=0bd30h ( 48432)
+I (boot): DROM	: lma=00020000h vma=3c010000h size=035b4h ( 13748)
+I (boot): libc heap size 314 kB.
+I (cache): Instruction cache: size 16KB, 8Ways, cache line size 32Byte
+I (spi_flash): detected chip: winbond
+I (spi_flash): flash io: dio
+[m
+[1;32muart:~$ [m[8D[J*** Booting Zephyr OS build v4.4.0-15982-ga22a1f470cca ***
+[1;32muart:~$ [m[8D[J[1;32muart:~$ [mbase run fingerprint
+BASE,1,6478,begin,zfm-shared-01,1,1
+BASE,2,6480,caps,1,100,2,0,1
+BASE,3,6494,inventory,baseline,0,1
+BASE,4,6496,id,baseline,2
+BASE,5,6498,phase,interruption
+Recovery test: one capture, then abort BEFORE the remaining captures.
+BASE,6,6507,start_staged,1,0
+Present the same finger; lift it as soon as the sensor accepts it.
+BASE,7,12864,capture,0,1,2,0
+Lift finger. Next step in 3 seconds.
+BASE,8,15869,abort,0
+BASE,9,15870,recovery_operation,0
+BASE,10,15884,inventory,after_interrupt,0,1
+BASE,11,15887,id,after_interrupt,2
+BASE,12,15891,interrupted_inventory_equal,1
+BASE,13,15905,inventory,recovery_cleanup,0,1
+BASE,14,15908,id,recovery_cleanup,2
+BASE,15,15922,inventory,restored,0,1
+BASE,16,15924,id,restored,2
+BASE,17,15927,restoration,recovery_cleanup,0
+BASE,18,15931,recovery,0
+BASE,19,15933,phase,successful_workflow
+Enrollment begins in 5 seconds. Use a finger/face/palm NOT already enrolled.
+BASE,20,20944,start_staged,1,0
+Present the same finger; lift it as soon as the sensor accepts it.
+BASE,21,22051,capture,0,1,2,0
+Lift finger. Next step in 3 seconds.
+Present the same finger; lift it as soon as the sensor accepts it.
+BASE,22,28103,capture,0,2,2,0
+Lift finger. Next step in 3 seconds.
+BASE,23,31238,finalize,0
+BASE,24,31239,enrollment,0,1
+BASE,25,31252,inventory,after_enrollment,0,2
+BASE,26,31255,id,after_enrollment,1
+BASE,27,31258,id,after_enrollment,2
+Identification begins in 3 seconds. Present the newly enrolled sample.
+BASE,28,35766,identify,0,1,1,91
+BASE,29,35778,inventory,final_cleanup,0,2
+BASE,30,35781,id,final_cleanup,1
+BASE,31,35784,id,final_cleanup,2
+BASE,32,35810,delete_new,1,0
+BASE,33,35822,inventory,restored,0,1
+BASE,34,35824,id,restored,2
+BASE,35,35827,restoration,final_cleanup,0
+BASE,36,35831,end,PASS,0
+[1;32muart:~$ [m

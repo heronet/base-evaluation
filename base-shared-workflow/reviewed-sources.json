@@ -1,0 +1,10 @@
+{
+  "biometrics.h": "ba1086e3db4d70ca947bb4411d3ea41682af34fbaf870cc28c6173415fef06ea",
+  "biometrics_ai10.c": "7bb9995aa55d66b66ba83e096816701821678de3b0885f13dc2fdcfee9792ba5",
+  "biometrics_emul.c": "6293a206f1fc697c03efae3080c91990e222ae5d21145e3b0b6295c29b364dd2",
+  "biometrics_gt5x.c": "81eb36d480944bd58e4521240f325698299ec25b5b7a1b987e4f7c0749e23e75",
+  "biometrics_gt5x.h": "9fe6a255d8abb7b5ed59a2b3386533e1f550e0fef3fe565b92ab570efcfe9565",
+  "biometrics_shell.c": "36899ff4444aacbe44de724bf470e13873b08e9ce69df1d8c7ec6fca9d3ccafb",
+  "biometrics_zfm_x0.c": "b1a6403ecf71c7f4871098226730f00e5ca1d4e84f0112880504a3aa4623df27",
+  "biometrics_zfm_x0.h": "1c2d4a5d21774553c5c996a941d2cffe8e42f3bf547958be6467dd6d8a3f26b8"
+}
